@@ -12,7 +12,55 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Title -->
     <title>Gmail</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="left-side flex">
+        <div class="menu hover">
+          <i class="fas fa-bars"></i>
+        </div>
+        <img src="assets/images/logo.png" alt="Gmail-logo" class="logo" />
+      </div>
+      <div class="middle">
+        <div class="search hover">
+          <i class="fa-solid fa-magnifying-glass hover"></i>
+          <input type="search" placeholder="Search mail" />
+          <ion-icon name="options-sharp" class="slider-icon hover"></ion-icon>
+        </div>
+      </div>
+      <div class="right-side flex">
+        <ion-icon name="help-circle-outline" class="hover r-icon"></ion-icon>
+        <i class="fa-solid fa-gear hover r-icon"></i>
+        <img
+          src="assets/images/gemini.png"
+          alt="gemini-icon"
+          width="40px"
+          background="red"
+          class="gemini-icon hover r-icon"
+        />
+        <ion-icon name="apps" class="hover r-icon"></ion-icon>
+        <img
+          src="assets/images/avatar.png"
+          alt="user-photo"
+          class="hover avatar r-icon"
+        />
+      </div>
+    </header>
+  </body>
 </html>
