@@ -13,7 +13,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
 }
 
 a {
@@ -21,16 +20,14 @@ a {
   text-decoration: none;
 }
 
-ion-icons,
-i,
-gemini-icon {
+.icon,
+.gemini-icon {
   cursor: pointer;
 }
 
 .hover:hover {
-  /* transition: all 0.3s; */
   background-color: #d8dbdd;
-  cursor: pointer;
+  border-radius: 50%;
 }
 
 header {
@@ -39,10 +36,19 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  gap: 1px;
 }
 
-.middle {
-  margin-right: 12%;
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  margin: 0 4px;
+  color: #5f6367;
+}
+
+.menu:hover {
+  border-radius: 50%;
 }
 
 .left-side .logo {
@@ -52,21 +58,11 @@ header {
 
 .left-side .logo:hover {
   cursor: pointer;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  margin: 0 4px;
-}
-
-.menu:hover {
-  border-radius: 50%;
-}
-
-.menu i {
   color: #5f6367;
+}
+
+.middle {
+  margin-right: 12%;
 }
 
 .middle .search {
@@ -78,22 +74,14 @@ header {
   border-radius: 50px;
   width: 700px;
   background-color: #eaf1fb;
-  width: 750px;
+  width: 760px;
+  height: 46px;
 }
 
-.search i {
-  font-size: 20px;
-  padding: 8px;
+.search .icon {
+  padding: 6px;
   border-radius: 50%;
-  margin: 0;
-  color: #444746;
-}
-
-.slider-icon {
-  font-size: 25px;
-  padding: 8px;
-  border-radius: 50%;
-  margin: 0;
+  margin: 2px;
   color: #444746;
 }
 
@@ -141,4 +129,237 @@ header {
   height: 50px;
   object-fit: contain;
   padding: 5px;
+}
+
+.left-nav {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -10px;
+  padding: 12px;
+  gap: 40px;
+}
+
+.left-nav .compose-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #d0ebff;
+  padding: 20px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 20px;
+  max-width: 200px;
+}
+
+.left-nav .compose-section:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.left-nav .mail-group-section ul li {
+  font-size: 14px;
+  list-style-type: none;
+  margin-bottom: 4px;
+  padding: 8px;
+}
+
+.left-nav .mail-group-section ul li a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+.mail-group-section ul li:first-child {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e7f5ff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.mail-group-section ul li:first-child span,
+.mail-group-section ul li:first-child a {
+  font-weight: 600;
+  color: #000;
+}
+
+.mail-group-section ul li:hover {
+  background-color: #d8dbdd;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.left-nav .labels-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-nav .labels-section span {
+  width: 20px;
+  height: 20px;
+  color: #495057;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+section {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "header header header" "nav content sidebar" "nav content sidebar";
+  grid-template-columns: 230px 4fr 60px;
+  grid-template-rows: 70px 1fr;
+}
+
+header,
+aside,
+footer,
+nav {
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+.main-content {
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.mail-head {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #5f6367;
+}
+
+.mail-head .icon {
+  transition: all 0.3s;
+  color: #444746;
+  padding: 8px;
+}
+
+.mail-head .check-drop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+}
+
+.mail-head .check-drop .icon {
+  border-radius: 5px;
+  padding: 2px 0;
+}
+
+.messages:hover {
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0.2px #00000020;
+}
+
+.email-count {
+  transition: all 0.3s;
+  padding: 8px;
+  border-radius: 6px;
+  gap: 12px;
+}
+
+.main-content .mail-head .right,
+.main-content .mail-head .left,
+.main-content .messages .messages-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messages-area {
+  height: 80vh;
+  overflow: auto;
+}
+
+.messages {
+  height: 38px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ced4da;
+}
+
+.messages:first-child {
+  border-top: 1px solid #ced4da;
+}
+
+.aside-icons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.aside-icons img {
+  transition: all 0.3s;
+  width: 40px;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.aside-icons span {
+  height: 2px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+.aside-icons .icon {
+  transition: all 0.3s;
+  color: #495057;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.aside-icons div:last-child {
+  margin-top: auto;
+}
+
+.messages .messages-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.messages .messages-left {
+  gap: 15px;
+}
+
+.messages .messages-left .icon {
+  color: #c3c4c4;
+}
+
+.messages .messages-left input[type="checkbox"] {
+  border: 15px solid black;
 }
