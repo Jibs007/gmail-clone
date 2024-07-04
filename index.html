@@ -72,7 +72,7 @@
           <span class="material-symbols-outlined icon"> edit </span> Compose
         </div>
         <div class="mail-group-section">
-          <ul>
+          <ul id="mail-list">
             <li>
               <a href="#">
                 <span class="material-icons-outlined icon"> inbox </span>Inbox
@@ -93,14 +93,21 @@
             </li>
             <li>
               <a href="#"
+                ><span class="material-icons-outlined icon"> send </span>Sent</a
+              >
+            </li>
+            <li>
+              <a href="#"
                 ><span class="material-icons-outlined icon"> description </span
                 >Drafts</a
               >
             </li>
-            <li>
+            <li id="more-button">
               <span class="material-icons-outlined icon"> expand_more </span>
               <button>More</button>
             </li>
+
+            <div id="more-container" style="display: none"></div>
           </ul>
         </div>
         <div class="labels-section">
@@ -111,37 +118,65 @@
       <!-- Main content -->
       <main class="main-content">
         <div class="mail-head">
-          <div class="left">
-            <div class="check-drop">
-              <input type="checkbox" />
+          <div class="mail-head-top">
+            <div class="left">
+              <div class="check-drop">
+                <input type="checkbox" />
+                <span class="material-icons-outlined hover icon">
+                  arrow_drop_down
+                </span>
+              </div>
+              <span class="material-icons-outlined hover icon"> refresh </span>
               <span class="material-icons-outlined hover icon">
-                arrow_drop_down
+                more_vert
               </span>
             </div>
-            <span class="material-icons-outlined hover icon"> refresh </span>
-            <span class="material-icons-outlined hover icon"> more_vert </span>
-          </div>
 
-          <div class="right">
-            <div class="email-count hover" id="email-count">1-50 of 94</div>
-            <span class="material-icons-outlined hover icon">
-              chevron_left
-            </span>
-            <span class="material-icons-outlined hover icon">
-              chevron_right
-            </span>
+            <div class="right">
+              <div class="email-count hover" id="email-count">1-50 of 94</div>
+              <span class="material-icons-outlined hover icon">
+                chevron_left
+              </span>
+              <span class="material-icons-outlined hover icon">
+                chevron_right
+              </span>
+            </div>
+          </div>
+          <div class="head-navbar">
+            <a href="#" id="nav-primary" class="head-nav-link">
+              <span class="material-symbols-outlined"> inbox </span>
+              Primary
+            </a>
+            <a href="#" id="nav-promotions" class="head-nav-link">
+              <span class="material-symbols-outlined"> sell </span>
+              Promotions
+            </a>
+            <a href="#" id="nav-social" class="head-nav-link">
+              <span class="material-symbols-outlined"> group </span>
+              Social
+            </a>
           </div>
         </div>
         <div class="messages-area" id="messages-area">
           <div class="messages">
-            <div class="messages-left">
-              <input type="checkbox" />
-              <span class="material-icons-outlined icon hover">
-                star_border
-              </span>
-              <span class="sender"></span>
+            <div
+              style="
+                background-color: blue;
+                width: 20%;
+                border: 2px solid green;
+              "
+            >
+              <div class="messages-left">
+                <input type="checkbox" />
+                <span class="material-icons-outlined icon hover">
+                  star_border
+                </span>
+                <span class="sender"></span>
+              </div>
             </div>
-            <div class="messages-content"></div>
+            <div style="background-color: blue; width: 100%">
+              <div class="messages-content"></div>
+            </div>
             <div class="messages-date"></div>
           </div>
         </div>
@@ -167,3 +202,7 @@
     <script type="module" src="app.js"></script>
   </body>
 </html>
+
+<div>
+  <div class="msg"></div>
+</div>

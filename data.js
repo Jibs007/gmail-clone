@@ -4,6 +4,7 @@ export const emails = [
         subject: "You have a new follower!",
         message: "Someone just followed your repository. Check it out!",
         date: "June 20",
+
     },
     {
         sender: "Twitter",
@@ -132,7 +133,7 @@ export const emails = [
         date: "May 30",
     },
     {
-        sender: "Harvard Business Review",
+        sender: "Harvard Business",
         subject: "Weekly Insights",
         message: "Get the latest business insights and trends in our weekly newsletter.",
         date: "May 29",
